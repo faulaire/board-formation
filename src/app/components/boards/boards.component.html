@@ -1,3 +1,29 @@
-<mat-nav-list>
-  <a mat-list-item *ngFor="let board of _boards" [routerLink]="'/app/board/'+board.id"> {{ board.name }}</a>
-</mat-nav-list>
+<div class="container">
+  <button style="position: absolute; right: 30px; top :-70px;"  mat-mini-fab (click)="add()" color="secondary"><mat-icon>add</mat-icon></button>
+  <div class="grid-board">
+    <p class="title " style="opacity: .7">Liste des boards, total : {{boards.length}}</p>
+    <mat-grid-list [cols]="columns"  [rowHeight]="rowHeight" [gutterSize]="10" >
+      <mat-grid-tile *ngFor="let board of boards; let i = index;">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" [overlapTrigger]="false">
+          <button mat-menu-item  (click)="edit(board)">
+            <mat-icon>edit</mat-icon>
+            <span>Modifier</span>
+          </button>
+          <button mat-menu-item (click)="delete(board,i)">
+            <mat-icon>delete</mat-icon>
+            <span >Supprimer</span>
+          </button>
+        </mat-menu>
+        <p class="title" style="margin: 0 15px 0 0; width: 150px; font-weight: 100">{{board.name}}</p>
+        <a mat-stroked-button color="primary" [routerLink]="'/app/board/' + board.id">Accéder</a>
+        <div class="blur"></div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+
+
+</div>
