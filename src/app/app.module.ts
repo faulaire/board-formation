@@ -11,6 +11,8 @@ import { LoginComponent } from './components/login/login.component';
 import { ApplicationComponent } from './components/application/application.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { SearchComponent } from './components/shared/search/search.component';
+import { BoardsComponent } from './components/boards/boards.component';
+import { BoardComponent } from './components/board/board.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SearchComponent } from './components/shared/search/search.component';
     LoginComponent,
     ApplicationComponent,
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    BoardsComponent,
+    BoardComponent
   ],
   imports: [
     BrowserModule,
