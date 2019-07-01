@@ -20,10 +20,9 @@ export class UserService {
   }
 
   @LocalStorage() private _userConnected : User = null;
-
   public login(): Observable<User> {
 
-    return this.httpClient.get(environment.api + 'users').pipe( map((res: User) => {
+    return this.httpClient.get(environment.api + 'users').pipe( map((res: User[]) => {
       return this._userConnected = res[0];
     }));
   }

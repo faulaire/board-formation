@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {BoardsService} from '../../services/boards.service';
+import {Board} from '../../interfaces/board';
 
 @Component({
   selector: 'app-boards',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardsComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit() {
+    this.boardsService.load().subscribe((res: Board[]) => {
+      console.log(res);
+    });
   }
 
+  constructor(private boardsService: BoardsService, private router: Router) { }
 }
