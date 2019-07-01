@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { SearchComponent } from './components/shared/search/search.component';
 import { BoardsComponent } from './components/boards/boards.component';
 import { BoardComponent } from './components/board/board.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BoardComponent } from './components/board/board.component';
     HeaderComponent,
     SearchComponent,
     BoardsComponent,
-    BoardComponent
+    BoardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

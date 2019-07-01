@@ -14,7 +14,7 @@ import {
 } from '@angular/material';
 
 const declarations = [MatGridListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule,
-  , MatDialogModule, MatMenuModule, MatSidenavModule, MatProgressBarModule
+  MatDialogModule, MatMenuModule, MatSidenavModule, MatProgressBarModule
 ];
 
 @NgModule({
