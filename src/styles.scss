@@ -1,1 +1,100 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// @import '~perfect-scrollbar/css/perfect-scrollbar.css';
+// @import '~@swimlane/ngx-dnd/release/index.css';
+
+.fw{
+  width: 100%;
+}
+
+
+body{
+  margin: 0; padding: 0;
+  overflow: hidden;
+  #ScrollBarContent{
+    position: fixed;
+    top:0; left:0; right: 0; bottom: 0;
+    height: 100%;
+    width: 100%;
+  }
+  background: #ededed;
+}
+.container{
+  max-width: 1100px;
+  margin: auto auto;
+  position: relative;
+  padding: 0 30px;
+}
+
+
+
+.flex-container{
+  display: flex;
+  justify-content: space-between;
+}
+.mat-card-header{
+  margin: -24px -24px 0 -24px;
+  display: block;
+}
+.mat-card-header-text{
+  line-height: 50px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  display: block;
+  padding: 0 24px;
+  width: 100%;
+  margin: 0!important;
+  .mat-card-title{
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+.mat-card-actions{
+  border-top: 1px solid rgba(0,0,0,0.1);
+  display: block;
+  background: rgba(0,0,0,0.03);
+  margin: 0 -24px -24px -24px!important;
+  padding: 15px 24px!important;
+
+}
+
+.mat-card-content{
+  display: block;
+  margin: 24px 0;
+  p{
+    margin: 0 0 0 0;
+  }
+
+  &.confirm{
+    background:  #F44336;
+    display: block;
+    margin: 0 -24px;
+    padding: 24px;
+    color: #fff;
+    p{
+      text-align: center;
+    }
+  }
+}
+.mat-dialog-container{
+  padding: 24px 24px 24px 24px!important;
+}
+
+
+.ngx-dnd-item{
+  padding: 0; margin: 0;
+  background: transparent;
+  border:none
+}
+
+.ngx-dnd-container{
+  background: transparent;
+  border:none;
+  margin: 0px;
+  padding: 0;
+}
+
+.ngx-dnd-item:hover{
+  border : none;
+
+}

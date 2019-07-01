@@ -14,6 +14,7 @@ import { SearchComponent } from './components/shared/search/search.component';
 import { BoardsComponent } from './components/boards/boards.component';
 import { BoardComponent } from './components/board/board.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import {WebStorageModule} from 'ngx-store';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    WebStorageModule,
     MaterialModule,
     HttpClientModule,
     FormsModule,
