@@ -10,9 +10,10 @@ import {Board} from '../../interfaces/board';
 })
 export class BoardsComponent implements OnInit {
 
+  public _boards : Board[];
   ngOnInit() {
     this.boardsService.load().subscribe((res: Board[]) => {
-      console.log(res);
+      this._boards = res;
     });
   }
 

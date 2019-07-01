@@ -15,6 +15,7 @@ import { BoardsComponent } from './components/boards/boards.component';
 import { BoardComponent } from './components/board/board.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import {WebStorageModule} from 'ngx-store';
+import {MatListModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {WebStorageModule} from 'ngx-store';
     MaterialModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
