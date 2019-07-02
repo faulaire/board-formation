@@ -22,6 +22,16 @@ export class BoardsService {
     }));
   }
 
+  public getById(id: number, columns = true): Observable<BoardI> {
+    let url = environment.api + 'boards/' + id;
+    if (columns) {
+      url = url + '?_embed=columns';
+    }
+    return this.httpClient.get(url).pipe( map((res: BoardI) => {
+      return res;
+    }));
+  }
+
   public post(board: BoardI): Observable<BoardI> {
     if (+board.id) {
       return this.httpClient.patch(environment.api + `boards/${board.id}`, board)
