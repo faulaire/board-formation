@@ -1,3 +1,16 @@
-<p>board works!</p>
-<p class="title " style="opacity: .7">Name : {{board?.name}}</p>
-<p class="title " style="opacity: .7">Id : {{board?.id}}</p>
+<div class="container">
+  <div class="grid-board">
+    <button style="position: absolute; right: 30px; top :-50px;" (click)="addColumn()"  mat-mini-fab  color="secondary"><mat-icon>add</mat-icon></button>
+  </div>
+  <mat-card>
+    <mat-card-title style="float: right"> <button mat-stroked-button (click)="editBoard()"  >Gestion du board: {{board?.name}}</button></mat-card-title>
+    <mat-card-subtitle>Déplacez vos tickets entre les colonnes ou cliquez sur un ticket pour ouvrir le panneau de détails.</mat-card-subtitle>
+    <mat-card-content>
+      <perfect-scrollbar  [config]="scrollbarConfig" class="columns-container" *ngIf="board != null && board.columns.length">
+        <app-column  *ngFor="let col of board.columns" [column]="col"></app-column>
+      </perfect-scrollbar>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+

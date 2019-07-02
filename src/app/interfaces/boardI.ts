@@ -1,6 +1,7 @@
 export interface BoardI {
   id?: number;
   name: string;
+  columns: any[];
 }
 
 export class Board implements BoardI {

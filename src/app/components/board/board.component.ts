@@ -10,6 +10,11 @@ import {BoardI} from '../../interfaces/boardI';
 })
 export class BoardComponent implements OnInit {
 
+  public scrollbarConfig = {
+    supressScrollX: true,
+    supressScrollY: true
+  };
+
   get boardId(): number {
     return this._boardId;
   }
@@ -34,4 +39,11 @@ export class BoardComponent implements OnInit {
     );
   }
 
+  public addColumn() {
+
+  }
+
+  public editBoard() {
+
+  }
 }
