@@ -1,0 +1,32 @@
+.task{
+  margin: 0px;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 3px;
+  padding: 15px;
+  display: block;
+  min-height: 30px;
+  border:1px solid rgba(0,0,0,.1);
+  white-space: initial;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+.task-title{
+  margin: 0;
+  padding: 0;
+  opacity: .9;
+  font-weight: 400;
+}
+.task:hover{
+  transition: all 0.2s;
+  background: #3F51B5;
+  color:#fff;
+  .task-title {
+    opacity: 1;
+  }
+
+}
+.task-description{
+  font-size: 10px;
+  opacity: .7;
+}

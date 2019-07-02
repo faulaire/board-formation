@@ -1,6 +1,10 @@
-<ul>
-  <p class="title " style="opacity: .7">{{_column.name}}</p>
-  <ul>
-    <li *ngFor="let task of tasks">{{ task.title }}</li>
-  </ul>
-</ul>
+<div class="column" *ngIf="column != null">
+  <div class="column-header" (dblclick)="editColumn(column)">
+    <span class="name">{{column.name}}</span>
+  </div>
+  <perfect-scrollbar class="task-list ngx-dnd-container" >
+    <div class="dropZone" ngxDroppable="dropZone">
+      <app-task  class="ngx-dnd-item task" *ngFor="let task of column.tasks" [task]="task" ngxDraggable></app-task>
+    </div>
+  </perfect-scrollbar>
+</div>

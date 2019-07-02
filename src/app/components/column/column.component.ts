@@ -34,4 +34,7 @@ export class ColumnComponent implements OnInit {
   ngOnInit() {
   }
 
+  public editColumn(column: Column) {
+    
+  }
 }

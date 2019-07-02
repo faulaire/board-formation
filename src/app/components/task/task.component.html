@@ -1,0 +1,8 @@
+<div class="task"  *ngIf="task != null">
+  <div class="task-title">
+    {{task?.title}}
+  </div>
+  <div class="task-description">
+    {{task?.content.substr(0,60) }} {{ (task.content && task.content.length >= 60) ? '...' : '' }}
+  </div>
+</div>

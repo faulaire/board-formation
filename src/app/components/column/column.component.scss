@@ -1,0 +1,37 @@
+$columnHeight : 670px;
+.column{
+  height: $columnHeight;
+  width: 263px;
+  display: inline-block;
+  margin-right: 15px;
+
+}
+.column-header .name{
+  text-align: center;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  color:#fff;
+  background: #3F51B5;
+  border-radius: 3px;
+  z-index: 3;
+  position: relative;
+  transition: all 0.2s;
+  // box-shadow: 0 14px 28px lighten(#3F51B5,50%), 0 10px 10px lighten(#3F51B5,70%);
+  &:hover{
+    background: darken(#3F51B5, 20%);
+  }
+
+
+}
+.task-list{
+
+  background: #fff;
+  width: 100%;
+  display: block;
+  z-index: 2;
+  //margin-top: -20px;
+  .dropZone{
+    min-height:650px;
+  }
+}
