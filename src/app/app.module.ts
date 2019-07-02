@@ -17,6 +17,8 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import {WebStorageModule} from 'ngx-store';
 import {MatListModule} from '@angular/material';
 import { ModalBoardComponent } from './components/shared-modal/modal-board/modal-board.component';
+import { ColumnComponent } from './components/column/column.component';
+import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { ModalBoardComponent } from './components/shared-modal/modal-board/modal
     BoardsComponent,
     BoardComponent,
     FooterComponent,
-    ModalBoardComponent
+    ModalBoardComponent,
+    ColumnComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { ModalBoardComponent } from './components/shared-modal/modal-board/modal
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatListModule
+    MatListModule,
+    PerfectScrollbarModule
   ],
   entryComponents: [ModalBoardComponent], // Pour dire a angular qu'on a le droit de lui passer le composant
   providers: [],
