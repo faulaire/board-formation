@@ -26,7 +26,7 @@ export class ColumnComponent implements OnInit {
     }
   }
 
-  public tasks: any[] = [];
+  public tasks: Task[] = [];
   private _column: Column = null;
 
   constructor(private columnService: ColumnService) { }
