@@ -1,5 +1,5 @@
 <div class="container">
-  <button style="position: absolute; right: 30px; top :-70px;"  mat-mini-fab (click)="add()" color="secondary"><mat-icon>add</mat-icon></button>
+  <button style="position: absolute; right: 30px; top :-70px;"  mat-mini-fab (click)="addOrEdit()" color="secondary"><mat-icon>add</mat-icon></button>
   <div class="grid-board">
     <p class="title " style="opacity: .7">Liste des boards, total : {{boards.length}}</p>
     <mat-grid-list [cols]="columns"  [rowHeight]="rowHeight" [gutterSize]="10" >
@@ -8,7 +8,7 @@
           <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu" [overlapTrigger]="false">
-          <button mat-menu-item  (click)="edit(board)">
+          <button mat-menu-item  (click)="addOrEdit(board)">
             <mat-icon>edit</mat-icon>
             <span>Modifier</span>
           </button>

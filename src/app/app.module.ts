@@ -16,6 +16,7 @@ import { BoardComponent } from './components/board/board.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import {WebStorageModule} from 'ngx-store';
 import {MatListModule} from '@angular/material';
+import { ModalBoardComponent } from './components/shared-modal/modal-board/modal-board.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatListModule} from '@angular/material';
     SearchComponent,
     BoardsComponent,
     BoardComponent,
-    FooterComponent
+    FooterComponent,
+    ModalBoardComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ import {MatListModule} from '@angular/material';
     ReactiveFormsModule,
     MatListModule
   ],
+  entryComponents: [ModalBoardComponent], // Pour dire a angular qu'on a le droit de lui passer le composant
   providers: [],
   bootstrap: [AppComponent]
 })

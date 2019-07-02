@@ -1,0 +1,18 @@
+<mat-card-header>
+  <mat-card-title>{{ title  }}</mat-card-title>
+</mat-card-header>
+<mat-card-content>
+  <mat-form-field class="fw" appearance="outline">
+    <mat-label>Nom du board*</mat-label>
+    <input [formControl]="nameCtrl" matInput placeholder="Saisissez le nom du board">
+    <!--    Version old school : -->
+    <!--    <input [(ngModel)]="board.name" matInput placeholder="Saisissez le nom du board">-->
+  </mat-form-field>
+</mat-card-content>
+<mat-card-actions>
+  <div class="flex-container">
+    <button mat-button (click)="dialogRef.close(null)">Annuler</button>
+    <div class="space" style="width: 200px;"></div>
+    <button [disabled]="nameCtrl.status === 'INVALID'" mat-raised-button color="primary" (click)="save()"> {{ (editionMode) ? 'Mettre à jour': 'Ajouter'  }}</button>
+  </div>
+</mat-card-actions>
